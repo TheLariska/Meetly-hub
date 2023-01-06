@@ -1,3 +1,21 @@
+print("Script Load! (by Meetly)")
+
+game.StarterGui:SetCore(
+"SendNotification",
+{
+Title = "Script by Meetly",
+Text = "Thank you for choosing us!"
+}
+)
+
+game.StarterGui:SetCore(
+"SendNotification",
+{
+Title = "Discord",
+Text = "New Year Meetly#0885"
+}
+)
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
  
 local Window = Library.CreateLib("MEETLY HUB PREMIUM [New Year]", "RJTheme7")
@@ -1462,6 +1480,11 @@ wait()
 loadstring(game:HttpGet"https://raw.githubusercontent.com/WinterDinder/zombiettackfixed/main/zombo")()
 end)
 
+Section:NewButton("Specter 2", "my favorite game)", function()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+end)
+
 Section:NewButton("Apeirophobia (key)", "gui", function()
 wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CopyReal/NexHub/main/NexHubLoader"))()
@@ -2398,6 +2421,17 @@ local Section = Tab:NewSection("FUN SCRIPTS")
 Section:NewButton("animation gui", "animate your player", function()
 wait()
 loadstring(game:HttpGet("https://pastebin.com/raw/4DaCDxAW"))()
+end)
+
+Section:NewButton("Spam to chat (5x)", "-", function()
+wait()
+for i = 1, 5, 1 do
+wait(0.3)
+local A_1 = "Meetly Hub Boost"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end
 end)
  
 Section:NewButton("filing", "FILING HAHAHAHA", function()
@@ -3358,11 +3392,13 @@ local Section = Tab:NewSection("BETA TEST: Minigun#8496")
 
 local Tab = Window:NewTab("Update")
 
-local Section = Tab:NewSection("changelog 1.8.4")
+local Section = Tab:NewSection("changelog 1.8.5")
 
-local Section = Tab:NewSection("[/] Improved gui")
+local Section = Tab:NewSection("[+] add new load hub ")
 
-local Section = Tab:NewSection("[+] add new function Disabler AntiJumpPower")
+local Section = Tab:NewSection("[+] add new Script Specter 2")
+
+local Section = Tab:NewSection("[+] add new function Spam to chat")
 
 local Tab = Window:NewTab("settings")
 
