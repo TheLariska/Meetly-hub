@@ -64,6 +64,22 @@ game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
     end
 end)
 
+Section:NewToggle("Vclip up [double tap]", "2 tap", function(state)
+    if state then
+       game:GetService("Workspace")["bobrnikita_228"].Humanoid.HipHeight = 40
+    else
+       game:GetService("Workspace")["bobrnikita_228"].Humanoid.HipHeight = 0
+end
+end)
+
+Section:NewToggle("Vclip up 2 [double tap]", "2 tap", function(state)
+    if state then
+       game:GetService("Workspace")["bobrnikita_228"].Humanoid.HipHeight = 40
+    else
+       game:GetService("Workspace")["bobrnikita_228"].Humanoid.HipHeight = 2
+end
+end)
+
 Section:NewButton("KT LEAVE", "click tp", function()
 wait()
 bin=Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
@@ -1537,6 +1553,25 @@ end)
 local Tab = Window:NewTab("Visual/Render")
  
  local Section = Tab:NewSection("Visual Hack to Player")
+
+ Section:NewButton("KeyStrokes", "-", function()
+wait()
+getgenv().k1 = "W"
+getgenv().k2 = "A"
+getgenv().k3 =  "S"
+getgenv().k4 = "D"
+
+getgenv().backdrop = false -- only if you want the shadow bg.
+getgenv().showms = true -- only if you want to have your ms shown.
+getgenv().showfps = true -- only if you want to have your fps shown.
+getgenv().showkps = true -- only if you want to have your kps shown.
+getgenv().animated = true -- only if you want the GUI to have the animated shadow.
+getgenv().showarrows = false -- only if you want arrow keys to be shown.
+getgenv().keydrag = false -- only if you want the keys to be draggable, can also be buggy, will be worked on in the future.
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Zirmith/Util-Tools/main/keyStrokes.lua"))()
+
+end)
  
 Section:NewButton("FB (fullbright)", "fullbright", function()
 wait()
@@ -3392,13 +3427,13 @@ local Section = Tab:NewSection("BETA TEST: Minigun#8496")
 
 local Tab = Window:NewTab("Update")
 
-local Section = Tab:NewSection("changelog 1.8.5")
+local Section = Tab:NewSection("changelog 1.8.6")
 
-local Section = Tab:NewSection("[+] add new load hub ")
+local Section = Tab:NewSection("[+] vclip up/vclip up (2) ")
 
-local Section = Tab:NewSection("[+] add new Script Specter 2")
+local Section = Tab:NewSection("[+] add new Script KeyStrokes (Visual)")
 
-local Section = Tab:NewSection("[+] add new function Spam to chat")
+local Section = Tab:NewSection("[/] Improved AntiJumpPower")
 
 local Tab = Window:NewTab("settings")
 
