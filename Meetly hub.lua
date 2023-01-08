@@ -1,3 +1,11 @@
+for i = 1, 1, 1 do
+wait(0.3)
+local A_1 = "Script load! Creators: Meetly"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end
+
 print("Script Load! (by Meetly)")
 
 game.StarterGui:SetCore(
