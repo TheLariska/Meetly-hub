@@ -1,17 +1,9 @@
-for i = 1, 1, 1 do
-wait(0.3)
-local A_1 = "Script load! Creators: Meetly"
-local A_2 = "All"
-local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-Event:FireServer(A_1, A_2)
-end
-
 print("Script Load! (by Meetly)")
 
 game.StarterGui:SetCore(
 "SendNotification",
 {
-Title = "Script by Meetly",
+Title = "Made by Meetly",
 Text = "Thank you for choosing us!"
 }
 )
@@ -21,6 +13,14 @@ game.StarterGui:SetCore(
 {
 Title = "Discord",
 Text = "New Year Meetly#0885"
+}
+)
+
+game.StarterGui:SetCore(
+"SendNotification",
+{
+Title = "Coding helper",
+Text = "Robojini#1524"
 }
 )
 
@@ -399,6 +399,18 @@ UIS.InputBegan:Connect(function(input)
        Teleport(Mouse.Hit.p)
    end
 end)
+end)
+
+local Section = Tab:NewSection("Tool (FMSTR)")
+
+Section:NewButton("Dex", "-", function()
+wait()
+loadstring(game:GetObjects('rbxassetid://2180084478')[1].Source)()
+end)
+
+Section:NewButton("Remote Spy", "-", function()
+wait()
+loadstring(game:HttpGet("https://pastebin.com/raw/bCghX33W", true))()
 end)
  
 local Tab = Window:NewTab("Scripts")
@@ -2456,6 +2468,15 @@ Section:NewButton("KAT","(can crash on a weak computer)", function()
 wait()
 loadstring(game:HttpGet(('https://pastebin.com/raw/MHx8q6xP'),true))()
 end)
+
+local Tab = Window:NewTab("links")
+
+local Section = Tab:NewSection("Links")
+
+Section:NewButton("copy link Discord server","-", function()
+wait()
+setclipboard("https://discord.gg/Hg8BJSMjEZ")
+end)
  
 local Tab = Window:NewTab("FUN")
  
@@ -3435,13 +3456,15 @@ local Section = Tab:NewSection("BETA TEST: Minigun#8496")
 
 local Tab = Window:NewTab("Update")
 
-local Section = Tab:NewSection("changelog 1.8.6")
+local Section = Tab:NewSection("changelog 1.8.7")
 
-local Section = Tab:NewSection("[+] vclip up/vclip up (2) ")
+local Section = Tab:NewSection("[+] add new function Dex")
 
-local Section = Tab:NewSection("[+] add new Script KeyStrokes (Visual)")
+local Section = Tab:NewSection("[+] add new function copy discord")
 
-local Section = Tab:NewSection("[/] Improved AntiJumpPower")
+local Section = Tab:NewSection("[+] add new Section links")
+
+local Section = Tab:NewSection("[+] add new function Remote Spy")
 
 local Tab = Window:NewTab("settings")
 
