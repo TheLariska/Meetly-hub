@@ -12,7 +12,7 @@ game.StarterGui:SetCore(
 "SendNotification",
 {
 Title = "Discord",
-Text = "New Year Meetly#0885"
+Text = "TheMeetly#0885"
 }
 )
 
@@ -51,7 +51,12 @@ Section:NewButton("Super low Gravity", "-", function()
 wait()
 game.workspace.Gravity = 5
 end)
- 
+
+Section:NewSlider("Gravity slider","-", 192, 1, function(s)
+wait()
+game.workspace.Gravity = s
+end)
+
 Section:NewToggle("Disabler AntiWalkSpeed", "wait 0.4 second", function(state)
     if state then
 game:GetService("RunService").RenderStepped:wait() do
@@ -445,6 +450,11 @@ end)
 Section:NewButton("Ragdoll Engine", "-", function()
 wait()
 loadstring(game:HttpGet(('https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/RagdollEngineGUI.lua'),true))()
+end)
+
+Section:NewButton("Tower Of Hell [more] ----------->","Teleport To The Finish, God Mode & More", function()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Loader.lua"))()
 end)
 
 Section:NewButton("pet simulator x", "-", function()
@@ -1508,7 +1518,7 @@ end)
 
 Section:NewButton("DA HOOD", "gui", function()
 wait()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/grekkk/relases/main/zapped.lua'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex", true))()
 end)
 
 Section:NewButton("Zombie Attack", "gui", function()
@@ -1553,9 +1563,13 @@ end)
 Section:NewButton("MAD CITY", "HACK SCRIPT", function()
 wait()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/811e25ec8cfcdaa9ae7026353288783c/raw/4b073a5c1a0a4e2ed7e2304c2e769eb440a371a9/h", true))()
- 
 end)
- 
+
+Section:NewButton("MAD CITY 2 (Recommended) (key)", "HACK SCRIPT2", function()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/castycheat/mad-city/main/Protected%20(25).lua"))()
+end)
+
 Section:NewButton("SharkBite 2 (key)", "the key of the script in the discord", function()
 wait()
 loadstring(game:HttpGet('https://factshub.vercel.app'))()
@@ -2459,14 +2473,14 @@ wait()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))() --nice!--
 end)
 
-Section:NewButton("Tower Of Hell [more] ----------->","Teleport To The Finish, God Mode & More", function()
-wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Loader.lua"))()
-end)
- 
 Section:NewButton("KAT","(can crash on a weak computer)", function()
 wait()
 loadstring(game:HttpGet(('https://pastebin.com/raw/MHx8q6xP'),true))()
+end)
+
+Section:NewButton("Bed Wars (vape 4)", "-", function()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 end)
 
 local Tab = Window:NewTab("links")
@@ -2487,6 +2501,11 @@ wait()
 loadstring(game:HttpGet("https://pastebin.com/raw/4DaCDxAW"))()
 end)
 
+Section:NewButton("Kick you", "client kick", function()
+wait()
+game.Players.LocalPlayer:Kick('You kick) (by Meetly and Robojini)')
+end)
+
 Section:NewButton("Spam to chat (5x)", "-", function()
 wait()
 for i = 1, 5, 1 do
@@ -2497,7 +2516,40 @@ local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.S
 Event:FireServer(A_1, A_2)
 end
 end)
- 
+
+Section:NewButton("Spam to chat (5x) (EZZ)", "-", function()
+wait()
+for i = 1, 5, 1 do
+wait(0.3)
+local A_1 = "EZZ"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end
+end)
+
+Section:NewButton("Spam to chat (5x) (GG)", "-", function()
+wait()
+for i = 1, 5, 1 do
+wait(0.3)
+local A_1 = "GG"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end
+end)
+
+Section:NewButton("Spam to chat (5x) (ti lox)", "-", function()
+wait()
+for i = 1, 5, 1 do
+wait(0.3)
+local A_1 = "ti lox"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end
+end)
+
 Section:NewButton("filing", "FILING HAHAHAHA", function()
 wait()
 loadstring(game:HttpGet("https://pastebin.pl/view/raw/48f9f8ee"))() 
@@ -3448,23 +3500,29 @@ end)
  
 local Tab = Window:NewTab("Creators")
  
-local Section = Tab:NewSection("Creators: MEETLY ideas: SB_kto ia, Minigun#8496")
+local Section = Tab:NewSection("Creators: MEETLY ideas: SBC, Minigun#8496")
  
-local Section = Tab:NewSection("discord devoloper: New Year Meetly#0885")
+local Section = Tab:NewSection("discord devoloper: TheMeetly#0885")
  
 local Section = Tab:NewSection("BETA TEST: Minigun#8496")
 
 local Tab = Window:NewTab("Update")
 
-local Section = Tab:NewSection("changelog 1.8.7")
+local Section = Tab:NewSection("changelog 2.0")
 
-local Section = Tab:NewSection("[+] add new function Dex")
+local Section = Tab:NewSection("[+] add new chat Spamer")
 
-local Section = Tab:NewSection("[+] add new function copy discord")
+local Section = Tab:NewSection("[+] add new slider gravity")
 
-local Section = Tab:NewSection("[+] add new Section links")
+local Section = Tab:NewSection("[/] improved DA HOOD")
 
-local Section = Tab:NewSection("[+] add new function Remote Spy")
+local Section = Tab:NewSection("[+] add new script MAD CITY 2")
+
+local Section = Tab:NewSection("[/] improved dex")
+
+local Section = Tab:NewSection("[+] add new script Tower Of Hell")
+
+local Section = Tab:NewSection("[+] Update Hot scripts")
 
 local Tab = Window:NewTab("settings")
 
