@@ -3524,6 +3524,8 @@ local Section = Tab:NewSection("[+] add new script Tower Of Hell")
 
 local Section = Tab:NewSection("[+] Update Hot scripts")
 
+local Section = Tab:NewSection("[+] add kick you (FUN)")
+
 local Tab = Window:NewTab("settings")
 
 local Section = Tab:NewSection("settings")
