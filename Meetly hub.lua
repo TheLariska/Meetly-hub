@@ -67,6 +67,32 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 17.3
     end
 end)
 
+Section:NewSlider("New AF Speed [Z]",0,250,0, function(t)
+    local plr = game.Players.LocalPlayer
+    down = false
+
+    function onButton1Down(mouse)
+        down = true
+        while down do
+            if not down then break end
+            local char = plr.Character
+
+            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * t
+            wait()
+        end
+    end
+
+    function onButton1Up(mouse)
+        down = false
+    end
+
+    function onSelected(mouse)
+        mouse.KeyDown:connect(function(k) if k:lower()=="z"then onButton1Down(mouse)end end)
+        mouse.KeyUp:connect(function(k) if k:lower()=="z"then onButton1Up(mouse)end end)
+    end
+    onSelected(game.Players.LocalPlayer:GetMouse())
+end)
+
 Section:NewToggle("Disabler AntiJumpPower", "wait 0.4 second", function(state)
     if state then
 game:GetService("RunService").RenderStepped:wait() do
@@ -79,17 +105,17 @@ end)
 
 Section:NewToggle("Vclip up [double tap]", "2 tap", function(state)
     if state then
-       game:GetService("Workspace")["bobrnikita_228"].Humanoid.HipHeight = 40
+       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 40
     else
-       game:GetService("Workspace")["bobrnikita_228"].Humanoid.HipHeight = 0
+       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
 end
 end)
 
 Section:NewToggle("Vclip up 2 [double tap]", "2 tap", function(state)
     if state then
-       game:GetService("Workspace")["bobrnikita_228"].Humanoid.HipHeight = 40
+       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 40
     else
-       game:GetService("Workspace")["bobrnikita_228"].Humanoid.HipHeight = 2
+       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 0
 end
 end)
 
@@ -3508,23 +3534,11 @@ local Section = Tab:NewSection("BETA TEST: Minigun#8496")
 
 local Tab = Window:NewTab("Update")
 
-local Section = Tab:NewSection("changelog 2.0")
+local Section = Tab:NewSection("changelog 2.1")
 
-local Section = Tab:NewSection("[+] add new chat Spamer")
+local Section = Tab:NewSection("[/] fix noclip")
 
-local Section = Tab:NewSection("[+] add new slider gravity")
-
-local Section = Tab:NewSection("[/] improved DA HOOD")
-
-local Section = Tab:NewSection("[+] add new script MAD CITY 2")
-
-local Section = Tab:NewSection("[/] improved dex")
-
-local Section = Tab:NewSection("[+] add new script Tower Of Hell")
-
-local Section = Tab:NewSection("[+] Update Hot scripts")
-
-local Section = Tab:NewSection("[+] add kick you (FUN)")
+local Section = Tab:NewSection("[+] New Speed bypass")
 
 local Tab = Window:NewTab("settings")
 
