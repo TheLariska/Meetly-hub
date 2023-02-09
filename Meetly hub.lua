@@ -67,7 +67,7 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 17.3
     end
 end)
 
-Section:NewSlider("New AF Speed [Z]",0,250,0, function(t)
+Section:NewSlider("CFrame Speed [Z]",0,1000,0, function(t)
     local plr = game.Players.LocalPlayer
     down = false
 
@@ -93,7 +93,7 @@ Section:NewSlider("New AF Speed [Z]",0,250,0, function(t)
     onSelected(game.Players.LocalPlayer:GetMouse())
 end)
 
-Section:NewToggle("Disabler AntiJumpPower", "wait 0.4 second", function(state)
+Section:NewToggle("Disabler AntiJumpPower", "wait 1 second", function(state)
     if state then
 game:GetService("RunService").RenderStepped:wait() do
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
@@ -862,11 +862,11 @@ end)
  
 local Tab = Window:NewTab("Creators")
  
-local Section = Tab:NewSection("Developer: New Year Meetly#0885")
+local Section = Tab:NewSection("Developer: TheMeetly#0885")
 
-local Section = Tab:NewSection("Beta tester: New Year Meetly#0885")
+local Section = Tab:NewSection("Beta tester: TheMeetly#0885")
 
-local Section = Tab:NewSection("Ideas: New Year Meetly#0885")
+local Section = Tab:NewSection("ideas: TheMeetly#0885")
 end)
 
 Section:NewButton("Bed Wars (vape 4)", "-", function()
@@ -1545,6 +1545,11 @@ end)
 Section:NewButton("DA HOOD", "gui", function()
 wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex", true))()
+end)
+
+Section:NewButton("Counter Blox", "By Robojini", function()
+wait()
+loadstring(game:HttpGet('https://pastebin.com/raw/8cSuaFj1',true))();
 end)
 
 Section:NewButton("Zombie Attack", "gui", function()
@@ -3534,9 +3539,13 @@ local Section = Tab:NewSection("BETA TEST: Minigun#8496")
 
 local Tab = Window:NewTab("Update")
 
-local Section = Tab:NewSection("changelog 2.2")
+local Section = Tab:NewSection("changelog 2.3")
 
-local Section = Tab:NewSection("[+] Anti-Kick")
+local Section = Tab:NewSection("[+] add Rejoin")
+
+local Section = Tab:NewSection("[+] add script Counter blox")
+
+local Section = Tab:NewSection("[/] improved CFrame speed")
 
 local Tab = Window:NewTab("settings")
 
@@ -3579,6 +3588,23 @@ wait()
                     return psuedoEnv.__index(self, Index, ...)
                 end)
                 setreadonly(mt, true)
+end)
+
+Section:NewButton("Rejoin",".RCT", function()
+wait()
+local ts = game:GetService("TeleportService")
+
+
+
+local p = game:GetService("Players").LocalPlayer
+
+
+
+
+
+
+
+ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
 end)
 
 Section:NewButton("low lag", "-", function()
