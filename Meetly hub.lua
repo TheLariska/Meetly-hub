@@ -1,10 +1,16 @@
+local whitelistecheck = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheLariska/Base-acc/main/README.md", true))()
+
+if whitelistecheck[game:service('Players').LocalPlayer.UserId] then
+
+
+
 print("Script Load! (by Meetly)")
 
 game.StarterGui:SetCore(
 "SendNotification",
 {
-Title = "Made by Meetly",
-Text = "Thank you for choosing us!"
+Title = "Made by Robojini",
+Text = "WhiteList check!"
 }
 )
 
@@ -163,7 +169,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroe
 local window1 = library:Window("KT LEAVE Create meetly")
  
 window1:Button("KT LEAVE",function()
-local _speed=1000
+local _speed=450
 function tp(...)
    local plr=game.Players.LocalPlayer
    local args={...}
@@ -187,7 +193,7 @@ tp(-945, 119, -2979)
 end)
 end)
  
-Section:NewSlider("Speed", "Speed", 1000, 20, function(s) -- 1000 (Макс. значение) | 20 (Мин. значение)
+Section:NewSlider("Speed", "Speed", 1000, 16, function(s) -- 1000 (Макс. значение) | 16 (Мин. значение)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
  
@@ -3539,13 +3545,9 @@ local Section = Tab:NewSection("BETA TEST: Minigun#8496")
 
 local Tab = Window:NewTab("Update")
 
-local Section = Tab:NewSection("changelog 2.3")
+local Section = Tab:NewSection("script changelog")
 
-local Section = Tab:NewSection("[+] add Rejoin")
-
-local Section = Tab:NewSection("[+] add script Counter blox")
-
-local Section = Tab:NewSection("[/] improved CFrame speed")
+local Section = Tab:NewSection("[+] WhiteList")
 
 local Tab = Window:NewTab("settings")
 
@@ -3776,3 +3778,6 @@ local SettingSection = Setting:NewSection("Setting")
 SettingSection:NewKeybind("Toggle UI", "Close/Open UI", Enum.KeyCode.BackSlash, function()
     Library:ToggleUI()
 end)
+else
+  game:service('Players').LocalPlayer:Kick('Buy a script bruh')
+end
