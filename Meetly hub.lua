@@ -32,7 +32,7 @@ Text = "Robojini#1524"
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
  
-local Window = Library.CreateLib("MEETLY HUB PREMIUM [New Year]", "RJTheme7")
+local Window = Library.CreateLib("MEETLY HUB PREMIUM", "RJTheme7")
  
 local Tab = Window:NewTab("Main")
  
@@ -61,6 +61,10 @@ end)
 Section:NewSlider("Gravity slider","-", 192, 1, function(s)
 wait()
 game.workspace.Gravity = s
+end)
+
+Section:NewButton("full hp", "-", function()
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
 end)
 
 Section:NewToggle("Disabler AntiWalkSpeed", "wait 0.4 second", function(state)
@@ -109,61 +113,12 @@ game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
     end
 end)
 
-Section:NewToggle("Vclip up [double tap]", "2 tap", function(state)
-    if state then
-       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 40
-    else
-       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
-end
-end)
-
-Section:NewToggle("Vclip up 2 [double tap]", "2 tap", function(state)
-    if state then
-       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 40
-    else
-       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 0
-end
-end)
-
-Section:NewButton("KT LEAVE", "click tp", function()
+Section:NewButton("KT LEAVE", "tp", function()
 wait()
-bin=Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-bin.Name = "KT LEAVE"
- 
-function teleportPlayer(pos)
- 
-local player = game.Players.LocalPlayer
-if player == nil or player.Character == nil then return end
- 
-local char = player.Character
- 
-char:MoveTo(pos)
- 
-end
- 
- 
-enabled = true
-function onButton1Down(mouse)
-if not enabled then
-return
-end
- 
-local player = game.Players.LocalPlayer
-if player == nil then return end
-local cf = mouse.Hit
-teleportPlayer(cf.p)
- 
-end
- 
-function onSelected(mouse)
-mouse.Icon = "rbxassetUndecided/textures\\ArrowCursor.png"
-mouse.Button1Down:connect(function() onButton1Down(mouse) end)
-end
- 
-bin.Selected:connect(onSelected)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-945, 888, -2979)
 end)
- 
-Section:NewButton("KT LEAVE 2","Teleport KT", function()
+
+Section:NewButton("KT LEAVE 2 (M)","Teleport KT", function()
 wait()
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
 local window1 = library:Window("KT LEAVE Create meetly")
@@ -192,7 +147,31 @@ end
 tp(-945, 119, -2979)
 end)
 end)
- 
+
+Section:NewToggle("Freeze (M)", "freeze you humanoid", function(ez)
+    if ez then
+       game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+    else
+       game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+end
+end)
+
+Section:NewToggle("Vclip up [double tap] (M)", "2 tap", function(state)
+    if state then
+       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 40
+    else
+       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
+end
+end)
+
+Section:NewToggle("Vclip up 2 [double tap] (M)", "2 tap", function(state)
+    if state then
+       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 40
+    else
+       game.Players.LocalPlayer.Character.Humanoid.HipHeight = 0
+end
+end)
+
 Section:NewSlider("Speed", "Speed", 1000, 16, function(s) -- 1000 (Макс. значение) | 16 (Мин. значение)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
@@ -201,7 +180,7 @@ Section:NewSlider("JumpPower", "JumpPower", 1000, 50, function(s) -- 1000 (Ма�
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
  
-Section:NewButton("Noclip gui", "passage through walls", function()
+Section:NewButton("Noclip gui (M)", "passage through walls", function()
 wait()
 local Workspace = game:GetService("Workspace")
 local CoreGui = game:GetService("CoreGui")
@@ -514,7 +493,7 @@ Section:NewButton("Hotel (Teleport)", "-", function()
 wait()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
  
-local Window = Library.CreateLib("Hotel Script [New Year]", "RJTheme1")
+local Window = Library.CreateLib("Hotel Script (M)", "RJTheme1")
  
 local Tab = Window:NewTab("Teleport")
  
@@ -629,7 +608,7 @@ end)
 Fly()
 end)
 
-Section:NewButton("Noclip", "-", function()
+Section:NewButton("Noclip (M)", "-", function()
 wait()
 local Workspace = game:GetService("Workspace")
 local CoreGui = game:GetService("CoreGui")
@@ -878,6 +857,11 @@ end)
 Section:NewButton("Bed Wars (vape 4)", "-", function()
 wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+Section:NewButton("War Tycoon", "-", function()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vortex194/main/main/oilwarfare", true))()
 end)
 
 Section:NewButton("Piggy (tp to item)", "-", function()
@@ -1266,7 +1250,7 @@ end)
 
 Section:NewButton("MM2 (v2) (long loading)", "fly,esp,noclip.", function()
 wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Doggo-cryto/EclipseMM2/master/Script", true))()
 end)
 
 Section:NewButton("MM2 knife changer", "-", function()
@@ -2190,6 +2174,28 @@ Section:NewButton("Universal ESP", "ESP", function()
 wait()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
 end)
+
+Section:NewButton("Esp default (M)", "esp", function()
+wait()
+while wait(0.5) do
+    for i, childrik in ipairs(workspace:GetDescendants()) do
+        if childrik:FindFirstChild("Humanoid") then
+            if not childrik:FindFirstChild("EspBox") then
+                if childrik ~= game.Players.LocalPlayer.Character then
+                    local esp = Instance.new("BoxHandleAdornment",childrik)
+                    esp.Adornee = childrik
+                    esp.ZIndex = 0
+                    esp.Size = Vector3.new(4, 5, 1)
+                    esp.Transparency = 0.65
+                    esp.Color3 = Color3.fromRGB(255,48,48)
+                    esp.AlwaysOnTop = true
+                    esp.Name = "EspBox"
+                end
+            end
+        end
+    end
+end
+end)
  
 Section:NewButton("ESP GUI", "PRESS F4", function()
 wait()
@@ -2538,9 +2544,20 @@ wait()
 loadstring(game:HttpGet("https://pastebin.com/raw/4DaCDxAW"))()
 end)
 
+Section:NewSlider("HP", "you hp", 100, 1, function(slider)
+game.Players.LocalPlayer.Character.Humanoid.Health = slider
+end)
+
 Section:NewButton("Kick you", "client kick", function()
 wait()
 game.Players.LocalPlayer:Kick('You kick) (by Meetly and Robojini)')
+end)
+
+Section:NewButton("Spam Console (inf)", "spam", function()
+wait()
+while wait(0.2) do
+warn("console crash: by: TheMeetly!")
+end
 end)
 
 Section:NewButton("Spam to chat (5x)", "-", function()
@@ -3545,9 +3562,23 @@ local Section = Tab:NewSection("BETA TEST: Minigun#8496")
 
 local Tab = Window:NewTab("Update")
 
-local Section = Tab:NewSection("script changelog")
+local Section = Tab:NewSection("script 2.5")
 
-local Section = Tab:NewSection("[+] WhiteList")
+local Section = Tab:NewSection("[+] Script War Tycoon")
+
+local Section = Tab:NewSection("[+] Freeze")
+
+local Section = Tab:NewSection("[+] Hp slider")
+
+local Section = Tab:NewSection("[/] improved esp")
+
+local Section = Tab:NewSection("[+] esp default (by TheMeetly)")
+
+local Section = Tab:NewSection("[*] Recode KT LEAVE")
+
+local Section = Tab:NewSection("[+] Spam console (INF)")
+
+local Section = Tab:NewSection("[+] full hp")
 
 local Tab = Window:NewTab("settings")
 
