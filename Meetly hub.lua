@@ -540,9 +540,7 @@ end)
 
 Section:NewButton("MM2", "-", function()
 wait()
-repeat wait() until game.Players.LocalPlayer.Character
-url = "https://raw.githubusercontent.com/xennyy/Xenny-Ware/main/loader.lua"
-loadstring(game:HttpGet(url))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheLariska/mm2/main/mm2'), true))()
 end)
 
 Section:NewButton("slap battles", "-", function()
@@ -5083,4 +5081,3 @@ end)
 else
   game:service('Players').LocalPlayer:Kick('Buy a script bruh')
 end
-      
